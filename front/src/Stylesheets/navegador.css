@@ -1,0 +1,89 @@
+.command-panel {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: 'Fira Code', monospace;
+}
+
+.io-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+.code-section, .result-section {
+    background: rgba(30, 30, 50, 0.7);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #7b68ee;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.code-editor, .result-display {
+    width: 100%;
+    min-height: 255px;
+    background: #1e1e2d;
+    border: 1px solid #4a3a6e;
+    color: #e0e0ff;
+    padding: 12px;
+    border-radius: 6px;
+    resize: vertical;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.execute-btn, .secondary-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.execute-btn {
+    background: linear-gradient(135deg, #6a5acd 0%, #483d8b 100%);
+    color: white;
+}
+
+.execute-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(106, 90, 205, 0.3);
+}
+
+.execute-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.secondary-btn {
+    background: rgba(106, 90, 205, 0.2);
+    color: #b8b8d0;
+}
+
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
