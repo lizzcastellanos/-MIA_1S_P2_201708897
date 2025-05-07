@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import "../Stylesheets/navegador.css";
 
-const CommandInterface = ({ apiEndpoint = "http://localhost:8080/analizar" }) => {
+const CommandInterface = ({ apiEndpoint = "http://3.147.69.199:8080/analizar" }) => {
     const [inputCode, setInputCode] = useState('');
     const [outputResult, setOutputResult] = useState('');
     const [isLoading, setIsLoading] = useState(false);
