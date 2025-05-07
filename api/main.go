@@ -34,7 +34,7 @@ func main() {
 	corsHandler := cors.Default()
 
 	// Iniciar el servidor en el puerto 8080
-	fmt.Println("[Servidor] Iniciando en http://localhost:8080")
+	fmt.Println("[Servidor] Iniciando en https://localhost:8080")
 	http.ListenAndServe(":8080", corsHandler.Handler(http.DefaultServeMux))
 }
 
